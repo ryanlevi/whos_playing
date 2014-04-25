@@ -35,8 +35,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# using songkick's api
-gem 'songkickr'
+# using httparty to parse api's
+gem 'httparty'
+gem 'json'
 
 group :production do
   gem 'pg'

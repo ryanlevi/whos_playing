@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+$(function() {
+$( "#date" ).datepicker();
+$( "#date" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+});
+</script>
+<style type="text/css">
+    .ui-datepicker { font-size: 8pt !important; }
+</style>
+
+<%= form_tag("/home/index", method: "get") do %>
+  <%= label_tag(:artist, "Search for:") %>
+  <%= text_field_tag(:artist) %>
+  <%= label_tag(:date, "On:") %>
+  <%= text_field_tag(:date) %>
+  <%= submit_tag("Search") %>
+<% end %>
